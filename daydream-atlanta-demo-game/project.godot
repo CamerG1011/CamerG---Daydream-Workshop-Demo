@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Daydream Atlanta Demo Game"
-run/main_scene="uid://cl3nsb1a7kt82"
+run/main_scene="uid://bx2yeuiv68aux"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://Assets/icon.svg"
 

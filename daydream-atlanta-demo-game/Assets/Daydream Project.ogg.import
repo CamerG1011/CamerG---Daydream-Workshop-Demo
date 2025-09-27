@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://28nb6skg6eu7"
+path="res://.godot/imported/Daydream Project.ogg-31563eea5bd97b83ef2f02051c44425d.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Daydream Project.ogg"
+dest_files=["res://.godot/imported/Daydream Project.ogg-31563eea5bd97b83ef2f02051c44425d.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
