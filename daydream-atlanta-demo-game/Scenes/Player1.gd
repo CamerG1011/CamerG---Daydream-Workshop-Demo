@@ -5,6 +5,10 @@ const JUMP_VELOCITY = -400.0
 const GRAVITY = 1200.0
 
 func _physics_process(delta: float) -> void:
+	
+	var idle_texture = preload("res://Assets/Player1Front.png")
+	var right_texture = preload("res://Assets/Player1Right.png")
+	var left_texture = preload("res://Assets/Player1Left.png")
 	# Apply gravity
 	if not is_on_floor():
 		velocity.y += GRAVITY * delta
