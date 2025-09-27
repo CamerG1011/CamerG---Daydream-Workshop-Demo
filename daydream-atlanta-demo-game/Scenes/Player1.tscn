@@ -3,15 +3,18 @@
 [ext_resource type="Script" uid="uid://crjfv1n6w44ib" path="res://Scenes/Player1.gd" id="1_n5fpy"]
 [ext_resource type="Texture2D" uid="uid://cxgbocv0cp38u" path="res://Assets/icon.svg" id="2_kne1u"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e80uo"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n5fpy"]
+size = Vector2(16, 20)
 
 [node name="PLAYER1" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(-1, 0)
 script = ExtResource("1_n5fpy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-shape = SubResource("CapsuleShape2D_e80uo")
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_n5fpy")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
 position = Vector2(0, 5.9604645e-08)
