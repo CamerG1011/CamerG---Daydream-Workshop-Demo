@@ -15,10 +15,19 @@ run/main_scene="uid://bx2yeuiv68aux"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://Assets/icon.svg"
 
+[autoload]
+
+GameManager="*res://Scenes/gamemanager.gd"
+FadeLayer="*res://Scenes/FadeLayer.tscn"
+
 [display]
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[editor]
+
+version_control/autoload_on_startup=true
 
 [input]
 
