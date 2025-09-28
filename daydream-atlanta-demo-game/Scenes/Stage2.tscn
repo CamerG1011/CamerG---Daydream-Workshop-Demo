@@ -456,5 +456,6 @@ animation = &"enabled"
 
 [connection signal="body_entered" from="DeathTrigger" to="DeathTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="WinTrigger" to="WinTrigger" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D/ButtonArea" to="DeathTrigger" method="_on_button_area_body_entered"]
 [connection signal="body_entered" from="Node2D/ButtonArea" to="Node2D/ButtonArea" method="_on_body_entered"]
 [connection signal="body_shape_entered" from="Node2D/ButtonArea" to="Node2D/ButtonArea" method="_on_body_shape_entered"]
