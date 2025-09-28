@@ -52,6 +52,7 @@ func check_end_condition() -> void:
 	
 	if one_died and one_won:
 		print("End condition met! Starting end sequence...")
+		reset()
 		var audio_control = get_tree().current_scene.get_node("Control")
 		
 		if audio_control:
