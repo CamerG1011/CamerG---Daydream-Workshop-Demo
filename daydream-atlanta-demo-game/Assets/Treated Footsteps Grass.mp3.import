@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bgkomb05mjo2s"
+path="res://.godot/imported/Treated Footsteps Grass.mp3-63f13e4f3a1b846e6d5e2e265251e31e.mp3str"
+
+[deps]
+
+source_file="res://Assets/Treated Footsteps Grass.mp3"
+dest_files=["res://.godot/imported/Treated Footsteps Grass.mp3-63f13e4f3a1b846e6d5e2e265251e31e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
