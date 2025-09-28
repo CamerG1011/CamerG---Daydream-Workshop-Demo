@@ -10,9 +10,10 @@ var player2_won = false
 var stages = [
 	"res://Scenes/Stage1.tscn",
 	"res://Scenes/Stage2.tscn",
-	"res://Stage3.tscn",
-	"res://Stage4.tscn",
-	"res://sTAGE5.tscn",
+	"res://Scenes/Stage3.tscn",
+	"res://Scenes/Stage4.tscn",
+	"res://Scenes/sTAGE5.tscn",
+	"res://Scenes/ending.tscn",
 	
 	# Add more stages as needed
 ]
@@ -47,7 +48,11 @@ func check_end_condition() -> void:
 	var one_died = player1_dead != player2_dead
 	var one_won = player1_won != player2_won
 	var both_dead = player1_dead and player2_dead
-
+	var current_scene = get_tree().current_scene
+	
+	if current_scene.name == "sTAGE5":
+		change_to_next_stage()
+	
 	if both_dead:
 		print("Both players died! Restarting scene...")
 		reset()
