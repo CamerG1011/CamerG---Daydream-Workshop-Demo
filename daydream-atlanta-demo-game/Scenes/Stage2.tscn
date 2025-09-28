@@ -397,7 +397,6 @@ point_count = 2
 [node name="Node2D" type="Node2D"]
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-position = Vector2(-550, 2)
 stream = ExtResource("1_ujsqn")
 volume_db = 8.443
 autoplay = true
@@ -437,6 +436,7 @@ position = Vector2(1708, -2275)
 script = ExtResource("12_j868c")
 
 [node name="AudioPlayer" type="AudioStreamPlayer2D" parent="Control"]
+volume_db = 9.507
 
 [node name="SubtitleLabel" type="RichTextLabel" parent="Control"]
 offset_left = -264.0
