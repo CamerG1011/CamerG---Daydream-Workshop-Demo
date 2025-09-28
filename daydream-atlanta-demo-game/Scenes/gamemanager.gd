@@ -10,6 +10,10 @@ var player2_won = false
 var stages = [
 	"res://Scenes/Stage1.tscn",
 	"res://Scenes/Stage2.tscn",
+	"res://Stage3.tscn",
+	"res://Stage4.tscn",
+	"res://sTAGE5.tscn",
+	
 	# Add more stages as needed
 ]
 
