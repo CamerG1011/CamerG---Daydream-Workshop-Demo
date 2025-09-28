@@ -72,7 +72,5 @@ func play_footstep():
 		footstep_particles.emitting = false
 		await get_tree().process_frame  # ensure state resets
 		footstep_particles.emitting = true
-		
-		print("Playing footstep particles for surface:", current_surface)
 	else:
 		print("No texture found for surface:", current_surface)

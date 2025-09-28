@@ -12,7 +12,7 @@ const GRAVITY = 1900.0
 
 # === Surface Textures Table ===
 var surface_textures := {
-	"grass": preload("res://Assets/pixel_art (13).png"),
+	"grass": preload("res://Assets/pixel_art (1).png"),
 	"stone": preload("res://Assets/pixel_art (11).png"),
 	"wood": preload("res://Assets/pixel_art (13).png"),
 }
@@ -73,7 +73,5 @@ func play_footstep():
 		footstep_particles.emitting = false
 		await get_tree().process_frame  # ensure state resets
 		footstep_particles.emitting = true
-		
-		print("Playing footstep particles for surface:", current_surface)
 	else:
 		print("No texture found for surface:", current_surface)
