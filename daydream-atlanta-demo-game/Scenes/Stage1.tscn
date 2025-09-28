@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://bsp5sjknr2not"]
+[gd_scene load_steps=33 format=4 uid="uid://bsp5sjknr2not"]
 
 [ext_resource type="Texture2D" uid="uid://bxbhtvxbbeise" path="res://Assets/pixel_art (6).png" id="1_tafd4"]
 [ext_resource type="PackedScene" uid="uid://4veoe3h7tv8d" path="res://Scenes/Player2.tscn" id="1_ve6er"]
@@ -15,6 +15,7 @@
 [ext_resource type="Script" uid="uid://bg1hku2y25hyv" path="res://Scenes/AudioControl.gd" id="12_h4a3m"]
 [ext_resource type="Script" uid="uid://bevid8rcfbi8o" path="res://Scenes/win_trigger.gd" id="13_f8g6u"]
 [ext_resource type="FontFile" uid="uid://ksjkrn1k82h" path="res://Assets/Fonts/ARCADECLASSIC.TTF" id="13_vmg04"]
+[ext_resource type="Script" uid="uid://bhx7xx5tr4sng" path="res://Scenes/stone_area.gd" id="16_xmvbe"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s5d42"]
 texture = ExtResource("1_tafd4")
@@ -339,10 +340,22 @@ sources/7 = SubResource("TileSetAtlasSource_qqneu")
 sources/8 = SubResource("TileSetAtlasSource_uq51v")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vmg04"]
-size = Vector2(1164.5, 76)
+size = Vector2(1159.8125, 50)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_65h6j"]
 size = Vector2(317, 96.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nh3m3"]
+size = Vector2(507.5, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qo00i"]
+size = Vector2(119, 36.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kg6f4"]
+size = Vector2(132.5, 78.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s5d42"]
+size = Vector2(129.5, 67)
 
 [node name="Node2D" type="Node2D"]
 
@@ -367,7 +380,7 @@ position = Vector2(-926, -2558)
 script = ExtResource("12_65h6j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathTrigger"]
-position = Vector2(74, 481)
+position = Vector2(62.09375, 153)
 shape = SubResource("RectangleShape2D_vmg04")
 
 [node name="WinTrigger" type="Area2D" parent="."]
@@ -383,14 +396,33 @@ script = ExtResource("12_h4a3m")
 [node name="AudioPlayer" type="AudioStreamPlayer2D" parent="Control"]
 
 [node name="SubtitleLabel" type="RichTextLabel" parent="Control"]
-offset_left = -470.0
+offset_left = -448.0
 offset_top = -999.0
 offset_right = 1010.0
-offset_bottom = -69.0
+offset_bottom = -253.0
 theme_override_fonts/normal_font = ExtResource("13_vmg04")
 theme_override_font_sizes/normal_font_size = 250
 bbcode_enabled = true
 text = "text"
+
+[node name="StoneArea" type="Area2D" parent="." groups=["surface_areas"]]
+script = ExtResource("16_xmvbe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StoneArea"]
+position = Vector2(-767, -10)
+shape = SubResource("RectangleShape2D_nh3m3")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StoneArea"]
+position = Vector2(-190.5, -145.75)
+shape = SubResource("RectangleShape2D_qo00i")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StoneArea"]
+position = Vector2(196.75, -293.75)
+shape = SubResource("RectangleShape2D_kg6f4")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StoneArea"]
+position = Vector2(700.25, -542.5)
+shape = SubResource("RectangleShape2D_s5d42")
 
 [connection signal="body_entered" from="DeathTrigger" to="DeathTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="WinTrigger" to="WinTrigger" method="_on_body_entered"]
