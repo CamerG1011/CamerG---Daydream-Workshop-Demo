@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://dqqw6oqse2oos"]
+[gd_scene load_steps=24 format=4 uid="uid://dqqw6oqse2oos"]
 
 [ext_resource type="Texture2D" uid="uid://bxbhtvxbbeise" path="res://Assets/pixel_art (6).png" id="1_wmyq6"]
 [ext_resource type="Texture2D" uid="uid://c1plxe718ak4g" path="res://Assets/pixel_art (7).png" id="2_4snvh"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dwmfbmfqj3xyh" path="res://Assets/pixel_art (15).png" id="7_br7xt"]
 [ext_resource type="Texture2D" uid="uid://bi6kng7pdsm1a" path="res://Assets/pixel_art (11).png" id="8_ik630"]
 [ext_resource type="Texture2D" uid="uid://ct7w0r4w1f336" path="res://Assets/pixel_art (12).png" id="9_v0we8"]
+[ext_resource type="Texture2D" uid="uid://bdj2gyj08yui2" path="res://Assets/pixel_art.png" id="10_4snvh"]
 [ext_resource type="PackedScene" uid="uid://bdvrsym3udrsn" path="res://Scenes/Player1.tscn" id="10_8i4jj"]
 [ext_resource type="PackedScene" uid="uid://4veoe3h7tv8d" path="res://Scenes/Player2.tscn" id="11_f03m2"]
 
@@ -321,6 +322,10 @@ texture = ExtResource("9_v0we8")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c2cai"]
+texture = ExtResource("10_4snvh")
+texture_region_size = Vector2i(128, 128)
+
 [sub_resource type="TileSet" id="TileSet_x610l"]
 tile_size = Vector2i(128, 128)
 physics_layer_0/collision_layer = 1
@@ -333,6 +338,7 @@ sources/4 = SubResource("TileSetAtlasSource_bbudp")
 sources/6 = SubResource("TileSetAtlasSource_3h0jb")
 sources/7 = SubResource("TileSetAtlasSource_nmai6")
 sources/8 = SubResource("TileSetAtlasSource_eka7k")
+sources/9 = SubResource("TileSetAtlasSource_c2cai")
 
 [node name="Node2D" type="Node2D"]
 
@@ -347,14 +353,14 @@ tile_set = SubResource("TileSet_x610l")
 
 [node name="Lava" type="TileMapLayer" parent="."]
 z_index = 20
-position = Vector2(-556, 1)
+position = Vector2(-555, 1)
 tile_map_data = PackedByteArray("AADz/wUABAAAAAAAAAD0/wUABAAAAAAAAAD0/wYABAAAAAAAAADz/wYABAAAAAAAAADz/wcABAAAAAAAAADz/wgABAAAAAAAAAD0/wcABAAAAAAAAAD0/wgABAAAAAAAAAD1/wcABAAAAAAAAAD1/wgABAAAAAAAAAD2/wcABAAAAAAAAAD2/wgABAAAAAAAAAD3/wcABAAAAAAAAAD3/wgABAAAAAAAAAD4/wcABAAAAAAAAAD4/wgABAAAAAAAAAD5/wcABAAAAAAAAAD5/wgABAAAAAAAAAD6/wcABAAAAAAAAAD6/wgABAAAAAAAAAD7/wcABAAAAAAAAAD7/wgABAAAAAAAAAD1/wYABAAAAAAAAAD2/wYABAAAAAAAAAD3/wYABAAAAAAAAAADAAgABAAAAAAAAAAEAAgABAAAAAAAAAAGAAgABAAAAAAAAAAHAAgABAAAAAAAAAAIAAgABAAAAAAAAAAJAAgABAAAAAAAAAAKAAgABAAAAAAAAAALAAgABAAAAAAAAAAMAAgABAAAAAAAAAANAAgABAAAAAAAAAAOAAgABAAAAAAAAAAPAAgABAAAAAAAAAAQAAgABAAAAAAAAAARAAgABAAAAAAAAAASAAgABAAAAAAAAAATAAgABAAAAAAAAAAUAAgABAAAAAAAAAALAAcABAAAAAAAAAAMAAcABAAAAAAAAAANAAcABAAAAAAAAAAOAAcABAAAAAAAAAAPAAcABAAAAAAAAAAQAAcABAAAAAAAAAARAAcABAAAAAAAAAASAAcABAAAAAAAAAATAAcABAAAAAAAAAAUAAcABAAAAAAAAAAQAAYABAAAAAAAAAARAAYABAAAAAAAAAASAAYABAAAAAAAAAATAAYABAAAAAAAAAAUAAYABAAAAAAAAAAEAP7/BAAAAAAAAAAFAP7/BAAAAAAAAAAGAP7/BAAAAAAAAAAHAP7/BAAAAAAAAAAIAP7/BAAAAAAAAAAJAP7/BAAAAAAAAAAEAP3/BAAAAAAAAAADAAcABAAAAAAAAAAEAAcABAAAAAAAAAAGAAcABAAAAAAAAAAHAAcABAAAAAAAAAAIAAcABAAAAAAAAAAJAAcABAAAAAAAAAA=")
 tile_set = SubResource("TileSet_x610l")
 
 [node name="PLAYER1" parent="." instance=ExtResource("10_8i4jj")]
 z_index = 10
-position = Vector2(-2028, -2416)
+position = Vector2(-2080, -2401)
 
 [node name="PLAYER2" parent="." instance=ExtResource("11_f03m2")]
 z_index = 10
-position = Vector2(-1736, -2424)
+position = Vector2(-1736, -2393)
